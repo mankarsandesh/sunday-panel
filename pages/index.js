@@ -100,8 +100,19 @@ export default function Home() {
 									<h1 className="text-lg">Recent Orders</h1>
 									<Table />
 								</div>
-								<div className="p-4 rounded-md bg-white flex">
+								<div className="p-4 rounded-md bg-white flex flex-col">
 									<h1 className="text-lg">Top Selling Products </h1>
+									<div className="flex flex-row items-center py-4">
+										<img
+											className="h-16 w-auto bg-blue-200 rounded-md p-4"
+											src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
+										/>
+										<div className="ml-4">
+											<h1 className="text-lg">NIKE Shoes Black Pattern</h1>
+											<span></span>
+											<span>$657</span>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
