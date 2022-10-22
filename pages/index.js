@@ -3,11 +3,12 @@ import { Bars3BottomLeftIcon, BellIcon } from '@heroicons/react/24/outline'
 import Header from '../components/Header'
 import TopHeader from '../components/TopHeader'
 import Table from '../components/Table'
+import TopSelling from '../components/Product/TopSelling'
 
 export default function Home() {
 	return (
 		<>
-			<div className="bg-gray-200">
+			<div className="bg-indigo-100">
 				<Header />
 				<div className="flex flex-1 flex-col md:pl-64">
 					<div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
@@ -31,39 +32,39 @@ export default function Home() {
 							</div>
 							<div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-4 grid-cols-2 gap-4 ">
 								{/* Replace with your content */}
-								<div className="p-4 rounded-md bg-white flex">
+								<div className="p-6 rounded-md bg-white flex">
 									<BellIcon
-										className="mr-3 h-10 w-10 flex-shrink-0 text-indigo-800 bg-blue-100 rounded-full p-2"
+										className="mr-3 h-14 w-14 flex-shrink-0 text-indigo-800 bg-blue-100 rounded-full p-2"
 										aria-hidden="true"
 									/>
 									<span>
-										<h1 className="text-lg font-bold">178+</h1>
+										<h1 className="text-lg font-bold">3321+</h1>
 										<h1 className="text-sm">Save products</h1>
 									</span>
 								</div>
-								<div className="p-4 rounded-md bg-white flex">
+								<div className="p-6 rounded-md bg-white flex">
 									<BellIcon
-										className="mr-3 h-10 w-10 flex-shrink-0 text-indigo-800 bg-blue-100 rounded-full p-2"
+										className="mr-3 h-14 w-14 flex-shrink-0 text-red-800 bg-red-100 rounded-full p-2"
 										aria-hidden="true"
 									/>
 									<span>
-										<h1 className="text-lg font-bold">178+</h1>
+										<h1 className="text-lg font-bold">21+</h1>
 										<h1 className="text-sm">Save products</h1>
 									</span>
 								</div>
-								<div className="p-4 rounded-md bg-white flex">
+								<div className="p-6 rounded-md bg-white flex">
 									<BellIcon
-										className="mr-3 h-10 w-10 flex-shrink-0 text-indigo-800 bg-blue-100 rounded-full p-2"
+										className="mr-3 h-14 w-14 flex-shrink-0 text-yellow-800 bg-yellow-100 rounded-full p-2"
 										aria-hidden="true"
 									/>
 									<span>
-										<h1 className="text-lg font-bold">178+</h1>
+										<h1 className="text-lg font-bold">12+</h1>
 										<h1 className="text-sm">Save products</h1>
 									</span>
 								</div>
-								<div className="p-4 rounded-md bg-white flex">
+								<div className="p-6 rounded-md bg-white flex">
 									<BellIcon
-										className="mr-3 h-10 w-10 flex-shrink-0 text-indigo-800 bg-blue-100 rounded-full p-2"
+										className="mr-3 h-14 w-14 flex-shrink-0 text-pink-800 bg-pink-100 rounded-full p-2"
 										aria-hidden="true"
 									/>
 									<span>
@@ -90,17 +91,7 @@ export default function Home() {
 								</div>
 								<div className="p-4 rounded-md bg-white flex flex-col">
 									<h1 className="text-lg">Top Selling Products </h1>
-									<div className="flex flex-row items-center py-4">
-										<img
-											className="h-16 w-auto bg-blue-200 rounded-md p-4"
-											src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-										/>
-										<div className="ml-4">
-											<h1 className="text-lg">NIKE Shoes Black Pattern</h1>
-											<span></span>
-											<span>$657</span>
-										</div>
-									</div>
+									<TopSelling />
 								</div>
 							</div>
 						</div>

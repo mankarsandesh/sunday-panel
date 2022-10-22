@@ -124,33 +124,39 @@ export default function Header() {
 			{/* Static sidebar for desktop */}
 			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
 				{/* Sidebar component, swap this element with another sidebar if you like */}
-				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700 pt-5">
+				<div className="flex flex-grow flex-col overflow-y-auto bg-white pt-5">
 					<div className="flex flex-col  text-center  items-center px-4">
 						{/* <img
 							className="h-12 w-auto"
 							src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
 							alt="Your Company"
 						/> */}
-						<h1 className="text-white text-2xl mt-4 font-bold">
-							SUNDAY <span className="text-gray-300">PANEL</span>
+						<h1 className=" text-2xl mt-4 font-bold">
+							<span className="text-indigo-400">SUNDAY</span>{' '}
+							<span className="text-gray-300">PANEL</span>
 						</h1>
 					</div>
 
 					<div className="mt-5 flex flex-1 flex-col">
-						<nav className="flex-1 space-y-1 px-2 pb-4">
+						<nav className="flex-1 space-y-1 px-2 pb-4 ">
 							{navigation.map((item) => (
 								<a
 									key={item.name}
 									href={item.href}
 									className={classNames(
 										item.current
-											? 'bg-indigo-800 text-white'
-											: 'text-indigo-100 hover:bg-indigo-600',
-										'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+											? ' text-indigo-800 font-bold'
+											: 'text-gray-700 hover:text-indigo-600',
+										'group flex items-center px-2 py-2 text-sm font-medium rounded-md hover:text-indigo-600'
 									)}
 								>
 									<item.icon
-										className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300"
+										className={classNames(
+											item.current
+												? 'text-indigo-800 font-bold'
+												: 'text-gray-700 hover:text-indigo-600',
+											'mr-3 h-6 w-6 flex-shrink-0 '
+										)}
 										aria-hidden="true"
 									/>
 									{item.name}
