@@ -1,16 +1,4 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Menu, Transition } from '@headlessui/react'
-import {
-	Bars3BottomLeftIcon,
-	BellIcon,
-	CalendarIcon,
-	ChartBarIcon,
-	FolderIcon,
-	HomeIcon,
-	InboxIcon,
-	UsersIcon,
-	XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { Bars3BottomLeftIcon, BellIcon } from '@heroicons/react/24/outline'
 
 import Header from '../components/Header'
 import TopHeader from '../components/TopHeader'

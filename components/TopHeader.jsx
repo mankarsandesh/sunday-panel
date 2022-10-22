@@ -1,16 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import {
-	Bars3BottomLeftIcon,
-	BellIcon,
-	CalendarIcon,
-	ChartBarIcon,
-	FolderIcon,
-	HomeIcon,
-	InboxIcon,
-	UsersIcon,
-	XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { BellIcon } from '@heroicons/react/24/outline'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 const userNavigation = [
 	{ name: 'Your Profile', href: '#' },
@@ -22,7 +12,6 @@ function classNames(...classes) {
 }
 
 export default function TopHeader() {
-	const [sidebarOpen, setSidebarOpen] = useState(false)
 	return (
 		<>
 			<div className="flex flex-1 justify-between px-4">
