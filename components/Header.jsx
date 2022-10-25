@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
+import { useRouter } from 'next/router'
 import {
 	Bars3BottomLeftIcon,
 	BellIcon,
@@ -11,22 +12,54 @@ import {
 	UsersIcon,
 	XMarkIcon,
 } from '@heroicons/react/24/outline'
+;<svg
+	xmlns="http://www.w3.org/2000/svg"
+	fill="none"
+	viewBox="0 0 24 24"
+	strokeWidth={1.5}
+	stroke="currentColor"
+	className="w-6 h-6"
+>
+	<path
+		strokeLinecap="round"
+		strokeLinejoin="round"
+		d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+	/>
+</svg>
+
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 const navigation = [
-	{ name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
+	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
 	{ name: 'Analytics', href: '/analytics', icon: UsersIcon, current: false },
 	{ name: 'Invoice', href: '/invoice', icon: UsersIcon, current: false },
-	{ name: 'Schedule', href: '/invoice', icon: UsersIcon, current: false },
-	{ name: 'Calendar', href: '#', icon: FolderIcon, current: false },
-	{ name: 'Messages', href: '#', icon: FolderIcon, current: false },
-	{ name: 'Notification', href: '#', icon: FolderIcon, current: false },
-	{ name: 'Settings', href: '#', icon: ChartBarIcon, current: false },
+	{
+		name: 'Schedule',
+		href: '/Schedule',
+		icon: Bars3BottomLeftIcon,
+		current: false,
+	},
+	{ name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
+	{ name: 'Messages', href: '/messages', icon: InboxIcon, current: false },
+	{
+		name: 'Notification',
+		href: '/notifications',
+		icon: FolderIcon,
+		current: false,
+	},
+	{ name: 'Settings', href: '/settings', icon: ChartBarIcon, current: false },
+	{
+		name: 'Blank Page',
+		href: '/blank-page',
+		icon: ChartBarIcon,
+		current: false,
+	},
 ]
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 
 export default function Header() {
+	const router = useRouter()
 	const [sidebarOpen, setSidebarOpen] = useState(false)
 	return (
 		<>
@@ -97,7 +130,7 @@ export default function Header() {
 												key={item.name}
 												href={item.href}
 												className={classNames(
-													item.current
+													router.pathname === item.href
 														? 'bg-indigo-800 text-white'
 														: 'text-indigo-100 hover:bg-indigo-600',
 													'group flex items-center px-2 py-2 text-base font-medium rounded-md'
@@ -124,7 +157,7 @@ export default function Header() {
 			{/* Static sidebar for desktop */}
 			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
 				{/* Sidebar component, swap this element with another sidebar if you like */}
-				<div className="flex flex-grow flex-col overflow-y-auto bg-white pt-5">
+				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700  pt-5">
 					<div className="flex flex-col  text-center  items-center px-4">
 						{/* <img
 							className="h-12 w-auto"
@@ -138,27 +171,28 @@ export default function Header() {
 					</div>
 
 					<div className="mt-5 flex flex-1 flex-col">
-						<nav className="flex-1 space-y-1 px-2 pb-4 ">
+						<nav className="flex-1 space-y-1  pb-4 ">
 							{navigation.map((item) => (
 								<a
 									key={item.name}
 									href={item.href}
 									className={classNames(
-										item.current
-											? ' text-indigo-800 font-bold'
-											: 'text-gray-700 hover:text-indigo-600',
-										'group flex items-center px-2 py-2 text-sm font-medium rounded-md hover:text-indigo-600'
+										router.pathname === item.href
+											? ' text-indigo-600 font-bold border-2 bg-indigo-100'
+											: 'text-gray-300 hover:text-white',
+										'group flex items-center px-4 py-2 text-sm font-medium rounded-r-lg hover:text-indigo-600'
 									)}
 								>
 									<item.icon
 										className={classNames(
-											item.current
-												? 'text-indigo-800 font-bold'
-												: 'text-gray-700 hover:text-indigo-600',
+											router.pathname === item.href
+												? ' text-indigo-600 font-bold  bg-indigo-100'
+												: 'text-white hover:text-indigo-600',
 											'mr-3 h-6 w-6 flex-shrink-0 '
 										)}
 										aria-hidden="true"
 									/>
+
 									{item.name}
 								</a>
 							))}
