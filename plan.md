@@ -8,4 +8,4 @@ forgot
 Menu
 Layout -
 Blank Page
-Invice
+Invoice
