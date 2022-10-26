@@ -8,7 +8,7 @@ import Invoice from '../components/Product/Invoice'
 const PageHeader = () => {
 	return (
 		<>
-			<div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+			<div className="mx-auto  px-4 sm:px-6 md:px-8">
 				<div className="sm:flex sm:items-center">
 					<div className="sm:flex-auto">
 						<h1 className="text-xl font-semibold text-gray-900">
@@ -48,7 +48,7 @@ export default function BlankPage() {
 	return (
 		<>
 			<MainLayout PageHeader={PageHeader}>
-				<div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-1 grid-cols-1 gap-4 ">
+				<div className="mx-auto  px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-1 grid-cols-1  ">
 					<Invoice />
 				</div>
 			</MainLayout>

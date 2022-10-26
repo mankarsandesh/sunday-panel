@@ -178,9 +178,9 @@ export default function Header() {
 									href={item.href}
 									className={classNames(
 										router.pathname === item.href
-											? ' text-indigo-600 font-bold border-2 bg-indigo-100'
-											: 'text-gray-300 hover:text-white',
-										'group flex items-center px-4 py-2 text-sm font-medium rounded-r-lg hover:text-indigo-600'
+											? ' text-indigo-600 font-bold border-2 bg-indigo-100 hover:text-indigo-800'
+											: 'text-gray-300 hover:text-white ',
+										'group flex items-center px-4 py-2 text-sm font-medium  '
 									)}
 								>
 									<item.icon
