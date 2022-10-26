@@ -159,11 +159,6 @@ export default function Header() {
 				{/* Sidebar component, swap this element with another sidebar if you like */}
 				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700  pt-5">
 					<div className="flex flex-col  text-center  items-center px-4">
-						{/* <img
-							className="h-12 w-auto"
-							src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-							alt="Your Company"
-						/> */}
 						<h1 className=" text-2xl mt-4 font-bold">
 							<span className="text-indigo-400">SUNDAY</span>{' '}
 							<span className="text-gray-300">PANEL</span>
@@ -180,7 +175,7 @@ export default function Header() {
 										router.pathname === item.href
 											? ' text-indigo-600 font-bold border-2 bg-indigo-100 hover:text-indigo-800'
 											: 'text-gray-300 hover:text-white ',
-										'group flex items-center px-4 py-2 text-sm font-medium  '
+										'group flex items-center px-4 py-2 text-sm font-medium rounded-l-full  ml-4 '
 									)}
 								>
 									<item.icon
