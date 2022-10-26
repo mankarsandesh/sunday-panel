@@ -157,9 +157,9 @@ export default function Header() {
 			{/* Static sidebar for desktop */}
 			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
 				{/* Sidebar component, swap this element with another sidebar if you like */}
-				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700  pt-5">
+				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700">
 					<div className="flex flex-col  text-center  items-center px-4">
-						<h1 className=" text-2xl mt-4 font-bold">
+						<h1 className=" text-2xl mt-3 font-bold">
 							<span className="text-indigo-400">SUNDAY</span>{' '}
 							<span className="text-gray-300">PANEL</span>
 						</h1>
@@ -175,7 +175,7 @@ export default function Header() {
 										router.pathname === item.href
 											? ' text-indigo-600 font-bold border-2 bg-indigo-100 hover:text-indigo-800'
 											: 'text-gray-300 hover:text-white ',
-										'group flex items-center px-4 py-2 text-sm font-medium rounded-l-full  ml-4 '
+										'group flex items-center px-4 py-2 text-sm font-medium rounded-l-md  ml-4 '
 									)}
 								>
 									<item.icon
