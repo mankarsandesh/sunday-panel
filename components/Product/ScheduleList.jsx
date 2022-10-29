@@ -116,7 +116,7 @@ export default function ScheduleList() {
 						</th>
 						<th
 							scope="col"
-							className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+							className="px-4 py-3 text-left text-sm font-semibold text-gray-900"
 						>
 							Location
 						</th>
@@ -126,9 +126,12 @@ export default function ScheduleList() {
 						</th>
 					</tr>
 				</thead>
-				<tbody className="divide-y divide-gray-200 bg-white border-separate border-spacing-2">
+				<tbody className=" divide-gray-200 border-separate border-spacing-2">
 					{people.map((person, index) => (
-						<tr key={person.email}>
+						<tr
+							key={person.email}
+							className="border-0 bg-white mt-b border-r-emerald-200"
+						>
 							<td className="whitespace-nowrap py-3.5 pl-6  text-sm text-gray-800">
 								<input
 									id="default-checkbox"
@@ -145,8 +148,8 @@ export default function ScheduleList() {
 								2022-12-20
 							</td>
 							<td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-								<span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-									{person.role}
+								<span className="inline-flex rounded-full bg-green-100 px-4 py-3 text-xs font-semibold leading-5 text-green-800">
+									{person.department}
 								</span>
 							</td>
 
