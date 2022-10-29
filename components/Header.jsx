@@ -34,7 +34,7 @@ const navigation = [
 	{ name: 'Invoice', href: '/invoice', icon: UsersIcon, current: false },
 	{
 		name: 'Schedule',
-		href: '/Schedule',
+		href: '/schedule',
 		icon: Bars3BottomLeftIcon,
 		current: false,
 	},
