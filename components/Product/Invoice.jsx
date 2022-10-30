@@ -179,8 +179,8 @@ export default function TopSelling() {
 							</td>
 
 							<td className="relative whitespace-nowrap py-6  text-center text-sm font-medium flex items-center">
-								<PencilSquareIcon className="text-indigo-400 hover:text-indigo-600 w-6 h-6" />
-								<TrashIcon className="text-red-400 hover:text-red-600 w-6 h-6" />
+								<PencilSquareIcon className="text-indigo-400 hover:text-indigo-600 w-6 h-6 cursor-pointer" />
+								<TrashIcon className="text-red-400 hover:text-red-600 w-6 h-6 cursor-pointer" />
 							</td>
 						</tr>
 					))}

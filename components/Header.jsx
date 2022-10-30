@@ -19,6 +19,7 @@ import {
 	ChartBarSquareIcon,
 	UserCircleIcon,
 	UserGroupIcon,
+	DocumentTextIcon,
 } from '@heroicons/react/24/outline'
 import Logo from '@/components/Logo'
 const navigation = [
@@ -33,7 +34,7 @@ const navigation = [
 	{
 		name: 'Schedule',
 		href: '/schedule',
-		icon: RectangleStackIcon,
+		icon: DocumentTextIcon,
 		current: false,
 	},
 	{ name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
@@ -65,13 +66,16 @@ const navigation = [
 			{
 				name: 'Login',
 				href: '/login',
-				icon: UserCircleIcon,
 				current: false,
 			},
 			{
 				name: 'Register',
 				href: '/register',
-				icon: UserGroupIcon,
+				current: false,
+			},
+			{
+				name: 'Forgot Password',
+				href: '/forgot-password',
 				current: false,
 			},
 		],
@@ -258,7 +262,7 @@ export default function Header() {
 												className={classNames(
 													router.pathname === item.href
 														? ' text-indigo-600 font-bold  bg-indigo-100'
-														: 'text-white hover:text-indigo-600',
+														: 'text-white hover:text-white',
 													'mr-3 h-6 w-6 flex-shrink-0 '
 												)}
 												aria-hidden="true"
@@ -316,7 +320,7 @@ export default function Header() {
 							)}
 						</nav>
 					</div>
-					<div className="flex flex-shrink-0 bg-gray-700 p-4">
+					{/* <div className="flex flex-shrink-0 bg-gray-700 p-4">
 						<a href="#" className="group block w-full flex-shrink-0">
 							<div className="flex items-center   justify-between ">
 								<div>
@@ -343,7 +347,7 @@ export default function Header() {
 								</div>
 							</div>
 						</a>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</>

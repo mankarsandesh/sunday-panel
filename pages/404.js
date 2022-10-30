@@ -1,23 +1,21 @@
 import Link from 'next/link'
+import Logo from '@/components/Logo'
 export default function Example() {
 	return (
 		<>
-			<div className="min-h-full bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8 flex justify-center items-center h-screen">
-				<div className="mx-auto max-w-max">
-					<h1 className=" text-4xl mt-4 font-bold text-center h-20">
-						<span className="text-indigo-400">SUNDAY</span>{' '}
-						<span className="text-gray-300">PANEL</span>
-					</h1>
-					<main className="sm:flex">
-						<p className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-5xl">
+			<div className="min-h-full bg-gray-100 px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8 flex justify-center items-center h-screen">
+				<div className="mx-auto max-w-max text-center bg-indigo-600 p-10 rounded-md">
+					<Logo className="mx-auto " />
+					<main className="sm:flex mt-10">
+						<p className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
 							404
 						</p>
 						<div className="sm:ml-6">
 							<div className="sm:border-l sm:border-gray-200 sm:pl-6">
-								<h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+								<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
 									Page not found
 								</h1>
-								<p className="mt-1 text-base text-gray-500">
+								<p className="mt-1 text-base text-gray-200">
 									Please check the URL in the address bar and try again.
 								</p>
 							</div>
