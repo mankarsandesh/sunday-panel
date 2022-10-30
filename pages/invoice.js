@@ -1,4 +1,9 @@
-import { Bars3BottomLeftIcon, BellIcon } from '@heroicons/react/24/outline'
+import {
+	Bars3BottomLeftIcon,
+	BellIcon,
+	MagnifyingGlassIcon,
+} from '@heroicons/react/24/outline'
+import Search from '@/components/Search'
 
 import Table from '../components/Table'
 import TopSelling from '@/components/Product/TopSelling'
@@ -20,16 +25,16 @@ const PageHeader = () => {
 						</p>
 					</div>
 					<div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none flex">
-						<div className="border  rounded-full mr-3">
+						<div className="border  rounded-lg mr-3 flex bg-white border-gray-300 pl-6 pr-4 py-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm h-12 w-80">
 							<input
 								type="text"
 								name="search"
 								id="price"
-								className="block w-full  border-gray-300 px-4 py-2 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+								className="block w-full  focus:outline-none text-md"
 								placeholder="Search"
 								aria-describedby="price-currency"
 							/>
-							<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"></div>
+							<MagnifyingGlassIcon className="text-gray-500 h-6 w-6 pt-1 cursor-pointer" />
 						</div>
 						<button
 							type="button"

@@ -83,11 +83,15 @@ const people = [
 	// More people...
 ]
 
-import { StarIcon } from '@heroicons/react/20/solid'
+import {
+	StarIcon,
+	PencilSquareIcon,
+	TrashIcon,
+} from '@heroicons/react/20/solid'
 export default function TopSelling() {
 	return (
 		<>
-			<table className="min-w-full divide-y divide-gray-300">
+			<table className="min-w-full divide-y divide-gray-300 border-spacing-4">
 				<thead className="bg-gray-50">
 					<tr>
 						<th
@@ -132,7 +136,7 @@ export default function TopSelling() {
 						</th>
 					</tr>
 				</thead>
-				<tbody className="divide-y divide-gray-200 bg-white">
+				<tbody className="divide-y divide-gray-200 border-2 bg-white border-red-600">
 					{people.map((person, index) => (
 						<tr key={person.email}>
 							<td className="whitespace-nowrap py-3.5 pl-6  text-sm text-gray-800">
@@ -174,13 +178,9 @@ export default function TopSelling() {
 								</span>
 							</td>
 
-							<td className="relative whitespace-nowrap py-2 pr-4 text-right text-sm font-medium sm:pr-6">
-								<a href="#" className="text-indigo-600 hover:text-indigo-900">
-									Edit
-								</a>
-								<a href="#" className="ml-4 text-red-600 hover:text-indigo-900">
-									Delete
-								</a>
+							<td className="relative whitespace-nowrap py-6  text-center text-sm font-medium flex items-center">
+								<PencilSquareIcon className="text-indigo-400 hover:text-indigo-600 w-6 h-6" />
+								<TrashIcon className="text-red-400 hover:text-red-600 w-6 h-6" />
 							</td>
 						</tr>
 					))}

@@ -1,34 +1,42 @@
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Fragment } from 'react'
+import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import { Fragment, useState } from 'react'
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
 import MainLayout from '@/components/Layout/MainLayout'
 import Board from '@/components/Task/Board'
-const tabs = [
-	{ name: 'List', href: '#', current: false },
-	{ name: 'Board', href: '#', current: true },
-	{ name: 'Timeline', href: '#', current: false },
-]
+import Search from '@/components/Search'
+
 const PageHeader = () => {
+	const tabs = [
+		{ name: 'List', href: '#' },
+		{ name: 'Board', href: '#' },
+		{ name: 'Timeline', href: '#' },
+	]
+	const [activeTab, SetActiveTab] = useState('Board')
+	const updateTabsValue = (tabName) => {
+		SetActiveTab(tabName)
+	}
 	return (
 		<>
 			<div className="mx-auto  px-4 sm:px-6 md:px-8">
 				<div className="sm:flex sm:items-center">
 					<div className="sm:flex-auto">
 						<h1 className="text-xl font-semibold text-gray-900">Task View</h1>
+
 						<nav className="flex  mt-4 " aria-label="Tabs">
 							{tabs.map((tab) => (
 								<a
 									key={tab.name}
 									href={tab.href}
+									onClick={() => updateTabsValue(tab.name)}
 									className={classNames(
-										tab.current
+										tab.name === activeTab
 											? 'bg-indigo-700 text-white'
 											: 'bg-white text-gray-500 hover:text-gray-700',
 
-										'px-6 py-3 font-medium text-sm first:rounded-l-lg last:rounded-r-lg'
+										'px-6 py-3 font-medium text-sm first:rounded-l-lg last:rounded-r-lg w-30'
 									)}
 									aria-current={tab.current ? 'page' : undefined}
 								>
@@ -126,17 +134,7 @@ const PageHeader = () => {
 								</Menu.Items>
 							</Transition>
 						</Menu>
-						<div className="border rounded-xl mt-2 items-center p-2 bg-white w-60">
-							<input
-								type="text"
-								name="search"
-								id="price"
-								className="block w-full rounded-xl text-gray-600  bg-white px-2 py-1 focus:outline-0 focus:ring-indigo-500 sm:text-sm"
-								placeholder="Search"
-								aria-describedby="price-currency"
-							/>
-							<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"></div>
-						</div>
+						<Search />
 					</div>
 				</div>
 			</div>
