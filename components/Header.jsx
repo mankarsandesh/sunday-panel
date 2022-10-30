@@ -20,7 +20,7 @@ import {
 	UserCircleIcon,
 	UserGroupIcon,
 } from '@heroicons/react/24/outline'
-
+import Logo from '@/components/Logo'
 const navigation = [
 	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
 	{
@@ -237,12 +237,7 @@ export default function Header() {
 				{/* Sidebar component, swap this element with another sidebar if you like */}
 				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700">
 					<div className="flex flex-col  text-center  items-center px-4">
-						<h1 className=" text-2xl mt-5 font-bold">
-							<span className="text-indigo-800 bg-gray-200 py-1 text-md px-2 rounded-sm text-center mr-2">
-								SUNDAY
-							</span>{' '}
-							<span className="text-white">PANEL</span>
-						</h1>
+						<Logo />
 					</div>
 
 					<div className="mt-5 flex flex-1 flex-col">
