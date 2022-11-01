@@ -17,7 +17,8 @@ Task Board View - Done
 Task List View - Pending
 Customer List - Pending
 Customer Add - Pending
-Create New Invoice - Pending
+Create New Invoice - Done
+Invoice Show -Pending
 Create new Event - Pending
 Chat Page - pending
 Product View - Pending
