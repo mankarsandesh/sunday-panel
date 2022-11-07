@@ -237,7 +237,7 @@ export default function Header() {
 			</Transition.Root>
 
 			{/* Static sidebar for desktop */}
-			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-50 md:flex-col">
 				{/* Sidebar component, swap this element with another sidebar if you like */}
 				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700">
 					<div className="flex flex-col  text-center  items-center px-4">
@@ -255,7 +255,7 @@ export default function Header() {
 												router.pathname === item.href
 													? ' text-indigo-600 font-bold border-2 bg-indigo-100 hover:text-indigo-800'
 													: 'text-gray-300 hover:text-white ',
-												'group flex items-center px-4 py-2 text-sm font-medium rounded-l-md  ml-4 '
+												'group flex items-center px-4 py-2 text-sm font-medium rounded-l-md  ml-2 '
 											)}
 										>
 											<item.icon
@@ -280,7 +280,7 @@ export default function Header() {
 														router.pathname === item.href
 															? ' text-indigo-600 font-bold border-2 bg-indigo-100 hover:text-indigo-800'
 															: 'text-white hover:text-white ',
-														'group flex items-center px-4 py-2 text-sm font-medium rounded-l-md  ml-4 '
+														'group flex items-center px-4 py-2 text-sm font-medium rounded-l-md  ml-2 '
 													)}
 												>
 													<item.icon
