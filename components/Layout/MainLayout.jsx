@@ -20,7 +20,7 @@ export default function MainLayout({ PageHeader, children }) {
 						<TopHeader />
 					</div>
 
-					<main className=" pt-10    ">
+					<main>
 						{<PageHeader />}
 						<div className="py-6 h-full">{children}</div>
 					</main>
