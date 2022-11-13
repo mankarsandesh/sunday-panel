@@ -18,7 +18,7 @@ export default function Home() {
 	return (
 		<>
 			<MainLayout PageHeader={PageHeader}>
-				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-4 grid-cols-2 gap-4 ">
+				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-4  sm:grid-cols-2 grid-cols-2 gap-4 ">
 					{/* Replace with your content */}
 					<div className="p-6 rounded-md bg-white flex">
 						<BellIcon
@@ -62,8 +62,8 @@ export default function Home() {
 					</div>
 				</div>
 				{/* Reports and Analytics */}
-				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-3 grid-cols-1 gap-4 ">
-					<div className="p-4 rounded-md bg-white flex col-span-2">
+				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid  sm:grid-cols-1 md:grid-cols-2  grid-cols-1 gap-4 ">
+					<div className="p-4 rounded-md bg-white flex ">
 						<h1 className="text-lg">Reports</h1>
 					</div>
 					<div className="p-4 rounded-md bg-white flex">
@@ -72,12 +72,12 @@ export default function Home() {
 				</div>
 
 				{/* Order and Selling Products */}
-				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-3 grid-cols-1 gap-4 ">
-					<div className="p-4 rounded-md bg-white  col-span-2">
+				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 grid-cols-2 gap-4 ">
+					<div className="p-4 rounded-md bg-white ">
 						<h1 className="text-lg">Recent Orders</h1>
 						<Table />
 					</div>
-					<div className="p-4 rounded-md bg-white flex flex-col">
+					<div className="p-4 rounded-md bg-white flex flex-col ">
 						<h1 className="text-lg">Top Selling Products </h1>
 						<TopSelling />
 					</div>

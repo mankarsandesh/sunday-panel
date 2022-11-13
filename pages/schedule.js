@@ -303,8 +303,8 @@ export default function Schedule() {
 	return (
 		<>
 			<MainLayout PageHeader={PageHeader}>
-				<div className="flex  ">
-					<div className="bg-white w-1/4  rounded-xl mx-4 p-5">
+				<div className="flex   ">
+					<div className="bg-white w-1/4  rounded-xl mx-4 p-5 ">
 						<button
 							type="button"
 							className="w-full text-center items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"

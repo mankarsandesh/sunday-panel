@@ -1,35 +1,92 @@
+import { Menu, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Fragment, useState } from 'react'
+function classNames(...classes) {
+	return classes.filter(Boolean).join(' ')
+}
 export default function Board(props) {
 	return (
 		<div className="bg-white rounded-md p-4 mt-4 w-full ">
 			<div className="relative flex ">
-				<div className="flex h-5 items-center flex-none  justify-between my-2">
+				<div className="flex h-5 items-center flex-none   my-2  w-full">
 					<input
 						id="link-radio"
 						type="radio"
 						value=""
-						class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+						class="flex-none w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
 					></input>
 					<div
 						for="link-radio"
-						class="ml-2 text-md font-medium text-gray-900 dark:text-gray-300"
+						class="grow ml-2 text-left text-md font-medium text-gray-900 dark:text-gray-300 "
 					>
 						Dashboard View
 					</div>
-					<div className="ml-4">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							strokeWidth={1.5}
-							stroke="currentColor"
-							className="w-6 h-6 flex justify-end"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-							/>
-						</svg>
+					<div className="flex-none ml-4 flex mt-2">
+						<Menu as="div" className="relative inline-block text-right w-100">
+							<div>
+								<Menu.Button className="inline-flex w-100 justify-center rounded-md text-sm font-medium text-indigo-800 shadow-sm  focus:outline-none focus:ring-2   focus:ring-offset-2">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="w-6 h-6 flex justify-end"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+										/>
+									</svg>
+								</Menu.Button>
+							</div>
+
+							<Transition
+								as={Fragment}
+								enter="transition ease-out duration-100"
+								enterFrom="transform opacity-0 scale-95"
+								enterTo="transform opacity-100 scale-100"
+								leave="transition ease-in duration-75"
+								leaveFrom="transform opacity-100 scale-100"
+								leaveTo="transform opacity-0 scale-95"
+							>
+								<Menu.Items className="absolute text-left py-1 px-2 left-0 z-10 mt-0  origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+									<div className="py-1 ">
+										<Menu.Item>
+											{({ active }) => (
+												<a
+													href="#"
+													className={classNames(
+														active
+															? 'bg-gray-100 text-gray-900'
+															: 'text-indigo-700',
+														'block px-6 py-2 text-sm '
+													)}
+												>
+													Edit
+												</a>
+											)}
+										</Menu.Item>
+										<Menu.Item>
+											{({ active }) => (
+												<a
+													href="#"
+													className={classNames(
+														active
+															? 'bg-gray-100 text-gray-900'
+															: 'text-red-700',
+														'block px-4 py-2 text-sm'
+													)}
+												>
+													Delete
+												</a>
+											)}
+										</Menu.Item>
+									</div>
+								</Menu.Items>
+							</Transition>
+						</Menu>
 					</div>
 				</div>
 			</div>
