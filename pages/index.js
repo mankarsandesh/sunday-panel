@@ -30,7 +30,7 @@ export default function Home() {
 						/>
 						<span>
 							<h1 className="text-lg font-bold">3321+</h1>
-							<h1 className="text-sm">Save products</h1>
+							<h1 className="text-sm text-gray-600">Save products</h1>
 						</span>
 					</div>
 					<div className="p-6 rounded-xl bg-white flex">
@@ -40,7 +40,7 @@ export default function Home() {
 						/>
 						<span>
 							<h1 className="text-lg font-bold">21+</h1>
-							<h1 className="text-sm">Save products</h1>
+							<h1 className="text-sm  text-gray-600">Save products</h1>
 						</span>
 					</div>
 					<div className="p-6 rounded-xl bg-white flex">
@@ -50,7 +50,7 @@ export default function Home() {
 						/>
 						<span>
 							<h1 className="text-lg font-bold">12+</h1>
-							<h1 className="text-sm">Save products</h1>
+							<h1 className="text-sm  text-gray-600">Save products</h1>
 						</span>
 					</div>
 					<div className="p-6 rounded-xl bg-white flex">
@@ -60,7 +60,7 @@ export default function Home() {
 						/>
 						<span>
 							<h1 className="text-lg font-bold">178+</h1>
-							<h1 className="text-sm">Save products</h1>
+							<h1 className="text-sm  text-gray-600">Save products</h1>
 						</span>
 					</div>
 				</div>
