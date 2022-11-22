@@ -35,9 +35,9 @@ export default function TopSelling() {
 	return (
 		<>
 			{data.map((person) => (
-				<div className="flex flex-row items-center py-4" key={person.name}>
+				<div className="flex flex-row items-center p-4" key={person.name}>
 					<img
-						className="h-16 w-auto bg-blue-200 rounded-md p-4"
+						className="h-20 w-auto bg-blue-200 rounded-md p-4"
 						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
 					/>
 					<div className="ml-4">

@@ -7,7 +7,7 @@ export default function MainLayout({ PageHeader, children }) {
 		<>
 			<div className="bg-indigo-100">
 				<Header />
-				<div className="flex flex-1 flex-col md:pl-64">
+				<div className="flex flex-1 flex-col md:pl-60">
 					{/* <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
 						<button
 							type="button"
@@ -20,7 +20,7 @@ export default function MainLayout({ PageHeader, children }) {
 						<TopHeader />
 					</div> */}
 
-					<main className="pt-10">
+					<main className="pt-5">
 						{<PageHeader />}
 						<div className="py-6 h-full">{children}</div>
 					</main>

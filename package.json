@@ -11,7 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
-    "apexcharts": "^3.36.0",
+    "apexcharts": "^3.36.3",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
