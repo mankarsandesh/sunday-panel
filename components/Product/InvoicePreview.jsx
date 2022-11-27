@@ -34,7 +34,7 @@ export default function InvoicePreview() {
 					<PrinterIcon className="text-indigo-600 h-6 w-6  cursor-pointer mx-auto " />
 				</div>
 			</div>
-			<div className="bg-gray-100 p-4 mt-5 rounded-sm">
+			<div className="bg-gray-100 p-4 mt-5 rounded-md">
 				<div className="flex justify-between">
 					<div className="">
 						<div>

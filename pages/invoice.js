@@ -4,9 +4,7 @@ import {
 	MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline'
 import Search from '@/components/Search'
-
-import Table from '../components/Table'
-import TopSelling from '@/components/Product/TopSelling'
+import Link from 'next/link'
 import MainLayout from '@/components/Layout/MainLayout'
 import Invoice from '../components/Product/Invoice'
 
@@ -40,7 +38,7 @@ const PageHeader = () => {
 							type="button"
 							className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto"
 						>
-							+ Add New
+							<Link href="/create-invoice"> + Add New</Link>
 						</button>
 					</div>
 				</div>

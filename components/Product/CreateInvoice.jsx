@@ -30,7 +30,7 @@ import {
 export default function CreateInvoice() {
 	return (
 		<div className="bg-white w-1/2 rounded-xl mx-6 p-5">
-			<div className="text-2xl font-bold">Create New Invoice</div>
+			<div className="text-2xl font-bold ml-3">Create New Invoice</div>
 			<div className="mx-auto h-28 w-28 rounded-full bg-gray-100 text-center flex items-center mt-4 ">
 				<CameraIcon className="text-gray-600 h-10 w-10  cursor-pointer mx-auto " />
 			</div>

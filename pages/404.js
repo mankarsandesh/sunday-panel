@@ -3,7 +3,7 @@ import Logo from '@/components/Logo'
 export default function Example() {
 	return (
 		<>
-			<div className="min-h-full bg-gray-100 px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8 flex justify-center items-center h-screen">
+			<div className="min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8 flex justify-center items-center h-screen bg-indigo-300">
 				<div className="mx-auto max-w-max text-center bg-indigo-600 p-10 rounded-md">
 					<Logo className="mx-auto " />
 					<main className="sm:flex mt-10">
