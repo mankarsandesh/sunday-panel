@@ -22,7 +22,8 @@ export default function MainLayout({ PageHeader, children }) {
 
 					<main className="pt-5">
 						{<PageHeader />}
-						<div className="py-6 h-full">{children}</div>
+
+						<div className="py-6 h-full ">{children}</div>
 					</main>
 				</div>
 			</div>
