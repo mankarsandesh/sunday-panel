@@ -72,7 +72,9 @@ export default function Home() {
 					</div>
 					<div className="p-4 rounded-xl bg-white ">
 						<h1 className="text-lg ml-4  text-gray-600">Analytics</h1>
-						<Pie />
+						<div className="flex items-center w-full  text-center h-full">
+							<Pie />
+						</div>
 					</div>
 				</div>
 

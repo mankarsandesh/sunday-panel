@@ -16,10 +16,10 @@ class Bar extends Component {
 				},
 				responsive: [
 					{
-						breakpoint: 480,
+						breakpoint: 600,
 						options: {
 							chart: {
-								width: 40,
+								width: 80,
 							},
 							legend: {
 								position: 'bottom',
