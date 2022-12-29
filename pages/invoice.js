@@ -51,7 +51,7 @@ export default function BlankPage() {
 	return (
 		<>
 			<MainLayout PageHeader={PageHeader}>
-				<div className="mx-auto  px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-1 grid-cols-1  ">
+				<div className="mx-auto  px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-1 grid-cols-1 h-screen">
 					<Invoice />
 				</div>
 			</MainLayout>

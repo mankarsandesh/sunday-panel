@@ -18,7 +18,6 @@ export default function MainLayoutWithSide({ PageHeader, children, SideBar }) {
 					<div className="flex flex-1 flex-col md:pl-60">
 						<main className="pt-5">
 							{<PageHeader />}
-
 							<div className="py-6 h-full ">{children}</div>
 						</main>
 					</div>

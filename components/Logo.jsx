@@ -1,10 +1,8 @@
 export default function Logo() {
 	return (
-		<h1 className=" text-2xl mt-5 font-bold">
-			<span className="text-indigo-800 bg-white py-1 text-md px-2 rounded-sm text-center mr-2">
-				SUNDAY
-			</span>
-			<span className="text-white">PANEL</span>
-		</h1>
+		<div className="mt-5 text-center items-center ">
+			<img src="sunday1.png" className="w-16 mx-auto text-white" />
+			<h1 className=" text-2xl font-bold text-white">Sunday</h1>
+		</div>
 	)
 }

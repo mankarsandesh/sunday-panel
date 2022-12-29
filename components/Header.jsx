@@ -237,14 +237,14 @@ export default function Header() {
 			</Transition.Root>
 
 			{/* Static sidebar for desktop */}
-			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-50 md:flex-col">
+			<div className="hidden md:fixed md:inset-y-0 md:flex md:w-60 md:flex-col">
 				{/* Sidebar component, swap this element with another sidebar if you like */}
 				<div className="flex flex-grow flex-col overflow-y-auto bg-indigo-700">
 					<div className="flex flex-col  text-center  items-center px-4">
 						<Logo />
 					</div>
 
-					<div className="mt-20 flex flex-1 flex-col">
+					<div className="mt-10 flex flex-1 flex-col">
 						<nav className="flex-1 space-y-1  pb-4 ">
 							{navigation.map((item) =>
 								!item.children ? (
