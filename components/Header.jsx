@@ -22,65 +22,7 @@ import {
 	DocumentTextIcon,
 } from '@heroicons/react/24/outline'
 import Logo from '@/components/Logo'
-const navigation = [
-	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-	{
-		name: 'Analytics',
-		href: '/analytics',
-		icon: ChartBarSquareIcon,
-		current: false,
-	},
-	{ name: 'Invoice', href: '/invoice', icon: InboxStackIcon, current: false },
-	{
-		name: 'Schedule',
-		href: '/schedule',
-		icon: DocumentTextIcon,
-		current: false,
-	},
-	{ name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
-	{
-		name: 'Task View',
-		href: '/task-view',
-		icon: RectangleStackIcon,
-		current: false,
-	},
-	{ name: 'Messages', href: '/messages', icon: InboxIcon, current: false },
-	{
-		name: 'Notification',
-		href: '/notifications',
-		icon: BellAlertIcon,
-		current: false,
-	},
-	{ name: 'Settings', href: '/settings', icon: ChartBarIcon, current: false },
-	{
-		name: 'Blank Page',
-		href: '/blank-page',
-		icon: DocumentPlusIcon,
-		current: false,
-	},
-	{
-		name: 'Authentication',
-		icon: UserCircleIcon,
-		current: false,
-		children: [
-			{
-				name: 'Login',
-				href: '/login',
-				current: false,
-			},
-			{
-				name: 'Register',
-				href: '/register',
-				current: false,
-			},
-			{
-				name: 'Forgot Password',
-				href: '/forgot-password',
-				current: false,
-			},
-		],
-	},
-]
+import { navigation } from '../utils/constants'
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
 }
@@ -159,13 +101,18 @@ export default function Header() {
 														href={item.href}
 														className={classNames(
 															router.pathname === item.href
-																? 'bg-indigo-800 text-white'
+																? ''
 																: 'text-indigo-100 hover:bg-indigo-600',
 															'group flex items-center px-2 py-2 text-base font-medium rounded-md'
 														)}
 													>
 														<item.icon
-															className="mr-4 h-6 w-6 flex-shrink-0 text-indigo-300"
+															className={classNames(
+																router.pathname === item.href
+																	? 'bg-indigo-800 text-white'
+																	: '',
+																'mr-4 h-6 w-6 flex-shrink-0 text-indigo-300'
+															)}
 															aria-hidden="true"
 														/>
 														{item.name}

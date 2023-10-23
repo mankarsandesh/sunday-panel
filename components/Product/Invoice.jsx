@@ -136,10 +136,10 @@ export default function TopSelling() {
 						</th>
 					</tr>
 				</thead>
-				<tbody className="divide-y divide-gray-200 border-2 bg-white border-red-600">
+				<tbody className="divide-y divide-gray-200 border-1 bg-white border-red-600">
 					{people.map((person, index) => (
 						<tr key={person.email}>
-							<td className="whitespace-nowrap py-3.5 pl-6  text-sm text-gray-800">
+							<td className="whitespace-nowrap py-2 pl-6  text-sm text-gray-800">
 								<input
 									id="default-checkbox"
 									type="checkbox"
@@ -148,8 +148,8 @@ export default function TopSelling() {
 								/>
 								#{index}33341
 							</td>
-							<td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-								<div className="flex items-center">
+							<td className="whitespace-nowrap py-2 pl-4 pr-3 text-sm sm:pl-6">
+								<div className="flex items-center ">
 									<div className="h-10 w-10 flex-shrink-0">
 										<img
 											className="h-10 w-10 rounded-full"
@@ -166,21 +166,23 @@ export default function TopSelling() {
 									</div>
 								</div>
 							</td>
-							<td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+							<td className="whitespace-nowrap px-3 py-2 text-sm text-gray-500">
 								<div className="text-gray-500">{person.email}</div>
 							</td>
 							<td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
 								2022-12-20
 							</td>
-							<td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+							<td className="whitespace-nowrap px-3 py-2  text-sm text-gray-500">
 								<span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
 									Active
 								</span>
 							</td>
 
-							<td className="relative whitespace-nowrap py-6  text-center text-sm font-medium flex items-center">
-								<PencilSquareIcon className="text-indigo-400 hover:text-indigo-600 w-6 h-6 cursor-pointer" />
-								<TrashIcon className="text-red-400 hover:text-red-600 w-6 h-6 cursor-pointer" />
+							<td className="relative whitespace-nowrap py-2  text-center text-sm font-medium flex items-center">
+								<div className=" justify-center px-2 border pt-2 mx-auto inline-flex">
+									<PencilSquareIcon className="text-indigo-400 hover:text-indigo-600 w-4 h-4 cursor-pointer" />
+									<TrashIcon className="text-red-400 hover:text-red-600 w-4 h-4 cursor-pointer" />
+								</div>
 							</td>
 						</tr>
 					))}

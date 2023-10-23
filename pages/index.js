@@ -1,9 +1,9 @@
-import { Bars3BottomLeftIcon, BellIcon } from '@heroicons/react/24/outline'
 import dynamic from 'next/dynamic'
 import Table from '../components/Table'
 import TopSelling from '@/components/Product/TopSelling'
 import MainLayout from '@/components/Layout/MainLayout'
-
+import Card from '@/components/Dashboard/Card'
+import { DashboardCards } from '../utils/constants'
 const Pie = dynamic(() => import('@/components/Charts/Pie'), { ssr: false })
 const Bar = dynamic(() => import('@/components/Charts/Bar'), { ssr: false })
 
@@ -23,46 +23,9 @@ export default function Home() {
 			<MainLayout PageHeader={PageHeader}>
 				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid md:grid-cols-4  sm:grid-cols-2 grid-cols-2 gap-8">
 					{/* Replace with your content */}
-					<div className="p-6 rounded-xl bg-white flex">
-						<BellIcon
-							className="mr-3 h-14 w-14 flex-shrink-0 text-indigo-800 bg-blue-100 rounded-full p-2"
-							aria-hidden="true"
-						/>
-						<span>
-							<h1 className="text-lg font-bold">3321+</h1>
-							<h1 className="text-sm text-gray-600">Save products</h1>
-						</span>
-					</div>
-					<div className="p-6 rounded-xl bg-white flex">
-						<BellIcon
-							className="mr-3 h-14 w-14 flex-shrink-0 text-red-800 bg-red-100 rounded-full p-2"
-							aria-hidden="true"
-						/>
-						<span>
-							<h1 className="text-lg font-bold">21+</h1>
-							<h1 className="text-sm  text-gray-600">Save products</h1>
-						</span>
-					</div>
-					<div className="p-6 rounded-xl bg-white flex">
-						<BellIcon
-							className="mr-3 h-14 w-14 flex-shrink-0 text-yellow-800 bg-yellow-100 rounded-full p-2"
-							aria-hidden="true"
-						/>
-						<span>
-							<h1 className="text-lg font-bold">12+</h1>
-							<h1 className="text-sm  text-gray-600">Save products</h1>
-						</span>
-					</div>
-					<div className="p-6 rounded-xl bg-white flex">
-						<BellIcon
-							className="mr-3 h-14 w-14 flex-shrink-0 text-pink-800 bg-pink-100 rounded-full p-2"
-							aria-hidden="true"
-						/>
-						<span>
-							<h1 className="text-lg font-bold">178+</h1>
-							<h1 className="text-sm  text-gray-600">Save products</h1>
-						</span>
-					</div>
+					{DashboardCards.map((item) => (
+						<Card key={item.title} item={item} />
+					))}
 				</div>
 				{/* Reports and Analytics */}
 				<div className="mx-auto px-4 py-4 sm:px-6 md:px-8 grid  sm:grid-cols-1 md:grid-cols-3  grid-cols-1 gap-4 ">

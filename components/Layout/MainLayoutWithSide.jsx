@@ -13,7 +13,7 @@ export default function MainLayoutWithSide({ PageHeader, children, SideBar }) {
 	return (
 		<>
 			<div className="flex">
-				<div className="bg-indigo-100 w-3/4">
+				<div className="bg-gray-100 w-3/4">
 					<Header />
 					<div className="flex flex-1 flex-col md:pl-60">
 						<main className="pt-5">

@@ -5,7 +5,7 @@ import TopHeader from '@/components/TopHeader'
 export default function MainLayout({ PageHeader, children }) {
 	return (
 		<>
-			<div className="bg-indigo-100">
+			<div className="bg-gray-100">
 				<Header />
 				<div className="flex flex-1 flex-col md:pl-60">
 					<main className="pt-5">
