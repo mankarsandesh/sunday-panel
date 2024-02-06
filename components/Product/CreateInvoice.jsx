@@ -193,7 +193,7 @@ export default function CreateInvoice() {
 			<div className="mt-4 flex ">
 				<button
 					type="button"
-					className="w-1/2  mx-4 rounded-md border border-transparent border-indigo-100 text-indigo-600 px-4 py-2 text-lg  shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-center"
+					className="w-1/2  mx-4 rounded-md border border-transparent border-indigo-100 text-indigo-600 px-4 py-2 text-lg  shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-center hover:text-white"
 				>
 					Send Invoice
 				</button>
