@@ -28,4 +28,4 @@ Form Validation: Built-in form validation features help maintain data integrity 
 
 Notifications and Alerts: Administrators receive timely notifications and alerts about important events, such as system updates, errors, or user actions, enhancing operational awareness.
 
-# Demo Link <a target="_blank" href="sunday-panel-one.vercel.app">View Sunday Admin Panel</a>
+# Demo Link <a target="_blank" href="https://sunday-panel-one.vercel.app">View Sunday Admin Panel</a>
